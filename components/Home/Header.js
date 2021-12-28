@@ -22,9 +22,19 @@ const Header = () => {
 
                 <TouchableOpacity style={styles.icon}>
 
-                    <View style={styles.badge}>
-                        <Text style={styles.badgeText}>4</Text>
+                    <View 
+                        style={{
+                        height: 8, 
+                        width: 8, 
+                        position: "absolute", 
+                        zIndex: 100,
+                        backgroundColor: "red",
+                        borderRadius: 100,
+                        left: 20,
+                        bottom: 16
+                        }}>
                     </View>
+
                     <Ionicons name="heart-outline" size={24} color="black" />
 
                 </TouchableOpacity>

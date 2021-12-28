@@ -12,7 +12,7 @@ const Stories = () => {
     const [ username, setUsername] = useState("")
     
     useEffect (()=>{
-        axios.get("https://randomuser.me/api/?results=50").then((res)=>{
+        axios.get("https://randomuser.me/api/?results=100").then((res)=>{
             setUsers(res.data.results)
         })
 
@@ -29,7 +29,7 @@ const Stories = () => {
                 <View style={styles.AddStory}>
                     <Image
                     style={styles.AddAvatar}
-                    source={{uri: username.picture.medium}}
+                    source={{uri: "https://filmtoro.cz/img2/user/109375966592384593492.jpg"}}
                     />
                     <View style={styles.addicon} >
                         <Ionicons name="ios-add-circle" size={24} color="#147EFB" />
@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
     stories: {
        flexDirection: "row",
        paddingHorizontal: 10,
-       paddingBottom: 4,
+       paddingBottom: 16,
+       paddingTop: 8,
        borderBottomWidth: 1,
        borderBottomColor: "#E5E5E5",
     }, 
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
         height: 60,
         borderRadius: 999,
         borderColor: "#FF5341",
-        borderWidth: 2
+        borderWidth: 3
     },
     AddAvatar: {
         width: 60,
