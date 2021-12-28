@@ -9,7 +9,7 @@ const home = () => {
   const [posts, setPosts] = useState([])
   const axios = require("axios")
   useEffect(()=>{
-    axios.get("https://pixabay.com/api/?key=25013376-795498b9033358df535099a08&q=tech&image_type=photo&pretty=true")
+    axios.get("https://pixabay.com/api/?key=25013376-795498b9033358df535099a08&q")
     .then((res)=>{
       setPosts(res.data.hits)
       console.log(res.data.hits)
