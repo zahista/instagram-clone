@@ -1,8 +1,8 @@
 import {React, useEffect, useState }from 'react'
-import { View, Text, StyleSheet, ScrollView, Image, } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity} from 'react-native'
 import axios from "axios"
 import { Ionicons } from '@expo/vector-icons';
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+
 
 
 const Stories = () => {
@@ -25,17 +25,19 @@ const Stories = () => {
 
     return (
         <ScrollView showsHorizontalScrollIndicator={false} horizontal style={styles.stories}>
-
-            <View style={styles.AddStory}>
-                <Image
-                  style={styles.AddAvatar}
-                  source={{uri: username.picture.medium}}
-                />
-                <View style={styles.addicon} >
-                    <Ionicons name="ios-add-circle" size={24} color="#147EFB" />
+            <TouchableOpacity>
+                <View style={styles.AddStory}>
+                    <Image
+                    style={styles.AddAvatar}
+                    source={{uri: username.picture.medium}}
+                    />
+                    <View style={styles.addicon} >
+                        <Ionicons name="ios-add-circle" size={24} color="#147EFB" />
+                    </View>
+                    <Text style={styles.Adduser}>Váš příběh</Text>
                 </View>
-                <Text style={styles.Adduser}>Váš příběh</Text>
-            </View>
+            </TouchableOpacity>
+           
 
             {users.map((user, index)=>
                <View key={index} style={styles.story}>
