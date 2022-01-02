@@ -9,10 +9,9 @@ const home = () => {
   const [posts, setPosts] = useState([])
   const axios = require("axios")
   useEffect(()=>{
-    axios.get("https://pixabay.com/api/?key=25013376-795498b9033358df535099a08&q")
+    axios.get("https://pixabay.com/api/?key=25013376-795498b9033358df535099a08&q=desk+setup&image_type=photo&pretty=true")
     .then((res)=>{
       setPosts(res.data.hits)
-      console.log(res.data.hits)
 
     })
   }, [] )
@@ -20,8 +19,8 @@ const home = () => {
     return (
         <View>
           <Header />
-          <Stories />
           <ScrollView>
+          <Stories />
             {posts.map((post)=><Post post={post} />)}
           </ScrollView>
         </View>

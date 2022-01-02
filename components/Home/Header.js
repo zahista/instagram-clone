@@ -42,7 +42,7 @@ const Header = () => {
                 <TouchableOpacity style={styles.icon}>
 
                         <View style={styles.badge}>
-                            <Text style={styles.badgeText}>4</Text>
+                            <Text style={styles.badgeText}>43</Text>
                         </View>
                         <Ionicons name="paper-plane-outline" size={24} color="black" />
 
